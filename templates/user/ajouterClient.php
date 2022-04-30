@@ -85,6 +85,20 @@
 
 		</div>
 	</div>
+	<div class="first">
+
+	<div class="form-control">
+            <label for="Sophe">Ampilie</label>
+            <input type="text" placeholder="veiller saisir Nom  Sophe" id="Sophe" name="Sophe" />
+		<i class="fas fa-check-circle"></i>
+		<i class="fas fa-exclamation-circle"></i>
+
+		<?php if (isset($errors['Sophe'])):?> 
+            <p style="color:red"  > <?=$errors['Sophe'];?></p>
+        <?php endif?>
+
+		</div>
+		</div>
 	
 	<div class="first">
 		<button id="btnincriptions" name="valider">Valider</button>

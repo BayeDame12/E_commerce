@@ -16,49 +16,34 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
       
      }
      else if($_POST['action']=="inscription"){ 
-      
       $Prenom= segue($_POST['username']);
       $Nom = segue($_POST['name']);
       $Telephone = segue($_POST['Telephone']);
       $Ville = segue($_POST['ville']);
       $Quartier = segue($_POST['Quartier']);
       $Ampilie = segue($_POST['Ampilie']);
-
+      $Sophe=segue($_POST['Sophe']);
       /*============DEBUT===============CONNEXION ET INSERTION DES DONNE A LA BASE DE DONNEEE==============DEBUT====================*/
-
      $servername = '127.0.0.1';
      $dbname = 'RESEAUX_BASE_DE_DONNEE';
      $username = 'root';
      $password = '';
-     
      //On essaie de se connecter
      try{
          $conn = new PDO("mysql:host=$servername;dbname=RESEAUX_BASE_DE_DONNEE", $username, $password);
          //On définit le mode d'erreur de PDO sur Exception
          $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  
      }
-
      catch(PDOException $e){
        echo "Erreur : " . $e->getMessage();
      }
-if (isset($_POST['valider'])) {
-
-$sql =$conn->prepare("INSERT INTO clents(Prenom,Nom,Telephone,Ville,Quartier,Ampilie) VALUES(?,?,?,?,?,?)");
-$sql->execute(array($Prenom,$Nom,$Telephone,$Ville,$Quartier,$Ampilie));
-
-echo"LES DONNE ONT ETE BIEN ENVOYER A LA BASE DE DONNNEES";
-
-}
-      /*==============FIN=============CONNEXION ET INSERTION DES DONNE A LA BASE DE DONNEEE=============FIN=====================*/
-
-
-
-
-
-
-     
+        if (isset($_POST['valider'])) {
+           $sql =$conn->prepare("INSERT INTO clents(Prenom,Nom,Telephone,Ville,Quartier,Ampilie,Sophe) VALUES(?,?,?,?,?,?,?)");
+           $sql->execute(array($Prenom,$Nom,$Telephone,$Ville,$Quartier,$Ampilie,$Sophe));
+           require_once(PATH_TEMPLATES."user".DIRECTORY_SEPARATOR."accueil.html.php");
+          }
+      /*==============FIN=============CONNEXION ET INSERTION DES DONNE A LA BASE DE DONNEEE=============FIN=====================*/ 
      }
-
     }
 }
 
@@ -112,43 +97,13 @@ if($_SERVER['REQUEST_METHOD']=="GET"){
     header("location:".PATH_POST);
     
  }
- //*===================FONCTIONS ENREGISTRER CLIENTS==================================
-//  function enregistUser($tableau){
-//   $errors=[];
-//   champ_obligatoire('nom',$tableau['nom'],$errors,"Nom obligatoire");
-//   champ_obligatoire('prenom',$tableau['prenom'],$errors,"Prenom obligatoire");
-//   champ_obligatoire('Telephone',$tableau['Telephone'],$errors,"Le numero de Telephone obligatoire");
-//   champ_obligatoire('ville',$tableau['ville'],$errors,"Le nom de la ville obligatoire");
-  
-//   test_existance_logins($tableau['email'],$errors,'email',);
-  
-//   if(count($errors)==0){
-//     recupere_infos($tab);
-//     array_to_json("users",$tab);
-    
-//   }else{
-//     $_SESSION[KEY_ERRORS]=$errors; 
-//     if(!is_connect()){
-//       header("Location:".PATH_POST."?controlleurs=securite&action=inscription");        
-//     }
-//     if(is_admin()){ 
-//       header("Location:".PATH_POST."?controlleurs=user&action=ajouter");        
-//     }
-//   }
-// }
+ 
  //*======FONCTIONS QUI FILTRE LES DONNEE ENTRE PAR L UTILISATEUR LORS DE LINSCRIPTION================
 
  function segue(&$inputIns){
   return strip_tags(trim($inputIns));
  }
      //*======FONCTIONS QUI RECUPERE NON DONNEE DE L INSCRIPTIONS====================
-function recupere_infos(&$tab){
-  $tab['nom'] = segue($_POST['name']);
-  $tab['prenom'] = segue($_POST['username']);
-  $tab['Telephone'] = segue($_POST['Telephone']);
-  $tab['ville'] = segue($_POST['ville']);
- }
-
 
      //*======FONCTIONS QUI TESTE L EXISTANCE D UN LOGIN DUNE PERSONNE DANS MA BASE DE DONNEE=============
 

@@ -18,4 +18,3 @@ require_once dirname(dirname(__FILE__)) ."/config/role.php";
 require_once dirname(dirname(__FILE__)) ."/config/orm.php";
 // INCLUSION DE ROUTER
 require_once dirname(dirname(__FILE__)) ."/config/router.php";
-
