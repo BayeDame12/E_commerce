@@ -1,0 +1,233 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-repeat:no-repeat;
+    background-size: cover;
+    
+}
+
+/* *===============CAS PARTICULIER DE MONTRER ET D==================*/
+.imag2{
+    height:10vh;
+
+}
+:root{
+    --success-color:#2ecc71;
+    --error-color:#e74c3c;
+}
+.form-Control input:focus{
+    outline:0;
+    border-color:#777 ;
+}
+.form-Control.success input{
+border-color:var(--success-color);
+box-shadow: 0 0 5px 1px greenyellow;
+}
+.form-Control.error input{
+    border-color:var(--error-color);
+    box-shadow: 0 0 5px 1px red;
+}
+
+/**===============DIV DU HEADER==================*/
+
+.div-hed{
+    background-color:#052426;
+    height:10%;
+    width: 100%;
+    display: flex; 
+    flex:0 1 12em;
+}
+#h1-header{
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+  margin-left: 30%;
+  box-sizing:content-box;
+  flex:0 1 30em;
+
+} 
+/**===============FORMULAIRE FORM ET SON CONTENU=================**/
+.formControl{
+    display: flex;
+    justify-content: center;
+    height:80vh;
+    
+}
+.form-horizontal{
+    border: 1px solid white;
+display: flex;
+flex-direction: column;
+flex:0 1 30em;
+background-color: #05242670;
+justify-content: center;
+border-radius: 6%;
+border: none;
+margin-top: 40px;
+}
+.spanh1{
+    color: #4fcefd;
+    display: flex;
+    justify-content: center;
+    font-size:3rem;
+    font-weight:bold;
+    font-style:italic;
+    text-decoration: underline;
+}
+.input-login{
+    padding:1.5rem;
+    border-radius:10px;
+    display: flex;
+    margin:10px;
+    border:3px solid #4fcefd;
+    font-size: 1.5rem;
+}
+
+label{
+    color:#51bfd0;
+    margin-left:10px;
+    font-size:1.5rem;
+    font-style:italic;
+
+}
+
+.div-form-login{
+    display: flex;
+    flex-direction: column;
+}
+
+.div-form-password{
+    display: flex;
+    flex-direction: column;
+}
+.btn-group{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+#btn{
+    padding:1rem; 
+    border-radius:10px;
+    display: block;
+    width: 50%;
+    font-size:1.5rem;
+    background:#4fcefd;
+    border:none;
+    color: white;
+    font-style: italic;  
+} 
+/**=================PARITE MAIN===============**/
+
+.header{
+    display: flex;
+    height: 10%;
+    background-color:#05242642;
+    justify-content: space-between;
+    align-items:center;
+}
+.Deconnexion{
+    padding:1rem;
+    border:1px solid black;
+    text-decoration: none;
+    color:white;
+    font-size: 1.5rem;
+    background-color:rgb(11, 199, 212);
+    border-radius:3px;
+    border:none;
+
+}
+.h1-heade{
+    display: flex; 
+}
+.main{
+    display: flex;
+     height: 85vh;
+}
+.main-gauche{
+display: flex;
+flex-direction: column;
+width: 20%;
+height: 100%;
+margin-top: 10px;
+background-color:#05242654;
+flex: 1 0 12em;
+background-color:rgb(11, 199, 212);
+
+}
+.ajouter{
+    display: flex;
+    border:none;
+    border-radius:6px;
+    color:white;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    background-color:#052426;
+    flex: 1 0 10rem;
+    padding: 1rem;
+    justify-content: center;
+}
+.modifier{
+    display: flex;
+    border:none;
+    border-radius:6px;
+    color:white;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+     flex: 1 0 10rem;
+    background-color:#052426;
+    padding: 1rem;
+    justify-content: center;
+
+}.supprimer{
+    display: flex;
+    border:none;
+    border-radius:6px;
+    color:white;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    flex: 1 0 10rem;
+    padding: 1rem;
+    background-color:#052426;
+    justify-content: center;
+
+}.listerClient{
+    display: flex;
+    border:none;
+    border-radius:6px;
+    color:white;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    flex: 1 0 10rem;
+    background-color:#052426;
+    padding: 1rem;
+    justify-content: center;
+
+}
+.spanmaingauche{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.main-gauche a{
+display: flex;
+text-decoration: none;
+justify-content:center ;
+align-items:center;
+flex: 0 1 5em;
+}
+.main-droite{
+display: flex;
+height: 100%;
+width: 80%;
+margin: 10px;
+border: 5px solid #05242654;
+
+} 

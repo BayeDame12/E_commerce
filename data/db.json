@@ -1,0 +1,19 @@
+{
+    "users": [
+        {
+            "nom": "Samb",
+            "prenom": "Ahmed",
+            "email": "asamb650@gmail.com",
+            "password": "roosc9",
+            "role": "ADMIN",
+            "score": "15",
+            "avatar": "asamb_ADMIN.jpg"
+        },
+        {
+            "nom": "Lilah Roth",
+            "prenom": "tygutyl",
+            "Telephone": "+1 (638) 207-8511",
+            "ville": "Natus molestiae et d"
+        }
+    ]
+}

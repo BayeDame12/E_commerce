@@ -1,0 +1,5 @@
+
+<?php
+echo"BIENVENUE SUR LA PAGE LISTER CLIENT";
+
+?>
